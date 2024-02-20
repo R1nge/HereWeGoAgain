@@ -13,7 +13,9 @@ Scenes are under _Assets/Scenes/
 
 https://github.com/R1nge/HereWeGoAgain/assets/59400159/056b1251-2e94-4b65-be78-a357e40ecd69
 
-
+Just noticed, that the task says, that the indicator should be green, when is leading  
+And red, when it has started  
+My bad  
 
 
 https://github.com/R1nge/HereWeGoAgain/assets/59400159/e747c977-b2db-4a78-b2da-583e5affba4c
