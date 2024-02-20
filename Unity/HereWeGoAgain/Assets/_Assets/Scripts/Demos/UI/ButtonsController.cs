@@ -12,6 +12,9 @@ namespace _Assets.Scripts.Demos.UI
         private float _timer;
         private CoroutineType _currentCoroutine;
         private bool _started;
+        private Color _defaultColor = Color.yellow;
+        private Color _startedColor = Color.red;
+        private Color _leadingColor = Color.green;
 
         private void Awake()
         {
@@ -42,8 +45,8 @@ namespace _Assets.Scripts.Demos.UI
             buttonsView.SetText1("0");
             buttonsView.SetText2("0");
             buttonsView.SetButtonText("Start");
-            buttonsView.SetIndicator1Color(Color.yellow);
-            buttonsView.SetIndicator2Color(Color.yellow);
+            buttonsView.SetIndicator1Color(_defaultColor);
+            buttonsView.SetIndicator2Color(_defaultColor);
             ResetTimer();
         }
 
@@ -81,14 +84,14 @@ namespace _Assets.Scripts.Demos.UI
             {
                 case CoroutineType.First:
                     buttonsView.SetText1(_timer.ToString(CultureInfo.InvariantCulture));
-                    buttonsView.SetIndicator1Color(Color.red);
-                    buttonsView.SetIndicator2Color(Color.yellow);
+                    buttonsView.SetIndicator1Color(_leadingColor);
+                    buttonsView.SetIndicator2Color(_startedColor);
                     Log();
                     break;
                 case CoroutineType.Second:
                     buttonsView.SetText2(_timer.ToString(CultureInfo.InvariantCulture));
-                    buttonsView.SetIndicator1Color(Color.yellow);
-                    buttonsView.SetIndicator2Color(Color.red);
+                    buttonsView.SetIndicator1Color(_startedColor);
+                    buttonsView.SetIndicator2Color(_leadingColor);
                     Log();
                     break;
             }
@@ -102,8 +105,8 @@ namespace _Assets.Scripts.Demos.UI
                 case CoroutineType.First:
                     buttonsView.SetText1(0.ToString());
                     buttonsView.SetText2(0.ToString());
-                    buttonsView.SetIndicator1Color(Color.red);
-                    buttonsView.SetIndicator2Color(Color.yellow);
+                    buttonsView.SetIndicator1Color(_leadingColor);
+                    buttonsView.SetIndicator2Color(_defaultColor);
                     ResetTimer();
                     StartCoroutine(Coroutine2());
                     Log();
@@ -111,8 +114,8 @@ namespace _Assets.Scripts.Demos.UI
                 case CoroutineType.Second:
                     buttonsView.SetText1(0.ToString());
                     buttonsView.SetText2(0.ToString());
-                    buttonsView.SetIndicator1Color(Color.yellow);
-                    buttonsView.SetIndicator2Color(Color.red);
+                    buttonsView.SetIndicator1Color(_defaultColor);
+                    buttonsView.SetIndicator2Color(_leadingColor);
                     ResetTimer();
                     StartCoroutine(Coroutine1());
                     Log();
