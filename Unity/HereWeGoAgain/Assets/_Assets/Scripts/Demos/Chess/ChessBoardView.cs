@@ -13,8 +13,11 @@ namespace _Assets.Scripts.Demos.Chess
         
         public void MovePiece(int fromX, int fromZ, int toX, int toZ)
         {
+            //Probably not the best design
+            //Since the cell's chess piece can be accessed
             var piece = _board.GetCell(fromX, fromZ).ChessPieceView;
             _board.SetPiece(piece, toX, toZ);
+            _board.GetCell(fromX, fromZ).ChessPieceView = null;
         }
 
         private void Awake()
