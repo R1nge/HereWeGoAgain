@@ -6,12 +6,8 @@ Unity version ***2022.3.9f1***
 Scripts are under _Assets/Scripts/Demos/  
 Scenes are under _Assets/Scenes/  
 
-![image](https://github.com/R1nge/HereWeGoAgain/assets/59400159/ba42f77c-c374-40d7-b8c3-880b907d3ab8)
+https://github.com/R1nge/HereWeGoAgain/assets/59400159/9529b96d-2122-4f50-9cf4-779975d34dd2
 
-
-
-
-https://github.com/R1nge/HereWeGoAgain/assets/59400159/056b1251-2e94-4b65-be78-a357e40ecd69
 
 ~~Just noticed, that the task says, that the indicator should be green, when is leading~~  
 ~~And red, when it has started~~  
